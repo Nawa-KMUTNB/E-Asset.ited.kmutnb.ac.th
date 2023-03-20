@@ -1,0 +1,207 @@
+#border1 {
+    border-radius: 5px;
+    background-color: rgba(71, 71, 71, 0.993);
+    box-shadow: 5px 20px 40px black;
+    width: 1200px;
+    height: 1230px;
+    margin-left: 70px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+#border2 {
+    margin: 10px;
+    margin-top: 40px;
+    background-color: rgb(222, 241, 252);
+    border-radius: 20px;
+    padding: 40px;
+
+}
+
+#border3 {
+    border-radius: 5px;
+    background-color: rgb(71, 71, 71);
+    box-shadow: 5px 20px 40px black;
+    width: 1200px;
+    height: auto;
+    margin-left: 70px;
+    margin-top: 30px;
+    border-radius: 1.25rem;
+}
+
+#border4 {
+    margin: 25px;
+
+    background-color: rgb(251, 255, 188);
+    border-radius: 20px;
+    padding: 40px;
+
+}
+
+
+#bg {
+    background-color: rgb(248, 248, 248);
+}
+
+#bg2 {
+    background-color: rgb(248, 248, 248);
+}
+
+#input {
+    border-radius: 30px;
+    height: 45px;
+}
+
+
+#input-department {
+    border-radius: 30px;
+    height: 45px;
+}
+
+
+#other-input {
+    border-radius: 30px;
+    height: 45px;
+}
+
+
+#bring-department {
+    border-radius: 30px;
+    height: 45px;
+}
+
+#other-bring {
+    border-radius: 30px;
+    height: 45px;
+}
+
+#cover {
+    border-radius: 30px;
+    height: 45px;
+}
+
+#images {
+    border-radius: 30px;
+    height: 45px;
+}
+
+#code_money {
+    border-radius: 30px;
+    height: 45px;
+}
+
+#name_money {
+    border-radius: 30px;
+    height: 45px;
+}
+
+#budget {
+    border-radius: 30px;
+    height: 45px;
+}
+
+
+strong {
+    font-size: 19px;
+    color: rgb(0, 0, 0);
+}
+
+
+
+#brData {
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 60px;
+    width: 30%;
+    text-align: left;
+    height: 70px;
+    padding: 10px;
+    padding-right: 90px;
+    background: rgb(0, 140, 255);
+    box-shadow: 3px 4px 7px rgb(54, 54, 54);
+    margin-bottom: 15px;
+    margin-top: 30px;
+    color: aliceblue;
+
+}
+
+#brData2 {
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 60px;
+    width: 30%;
+    text-align: left;
+    height: 70px;
+    padding: 10px;
+    padding-right: 90px;
+    background: rgb(248, 225, 19);
+    box-shadow: 3px 4px 7px rgb(54, 54, 54);
+    margin-bottom: 15px;
+    margin-top: 30px;
+
+}
+
+#btn1 {
+    width: 350px;
+    height: 70px;
+    border-radius: 33px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    background-color: #0066ff;
+    margin-top: 10px;
+
+}
+
+#btn1:hover {
+    background-color: rgb(0, 255, 42);
+
+    box-shadow: 0 7px 10px black;
+    color: rgb(0, 0, 0);
+
+
+}
+
+#btn2 {
+    width: 350px;
+    height: 70px;
+    border-radius: 33px;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    background-color: #ffe600;
+    margin-top: 10px;
+
+}
+
+#btn2:hover {
+    background-color: rgb(43, 255, 0);
+
+    box-shadow: 0 7px 10px black;
+    color: rgb(255, 255, 255);
+
+
+}
+
+#back {
+    color: black;
+    font-size: 17px;
+    text-shadow: 0 3px 10px black;
+    text-decoration: none;
+}
+
+#back:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 3px 10px rgb(0, 255, 149);
+
+}
+
+.imgPreview img {
+    padding: 8px;
+    max-width: 230px;
+}
+
+.coverPreview img {
+    padding: 8px;
+    max-width: 230px;
+}
