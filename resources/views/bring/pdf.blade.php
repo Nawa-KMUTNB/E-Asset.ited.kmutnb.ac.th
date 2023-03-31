@@ -37,14 +37,17 @@
 <body>
     <img src="../public/ited.jpg" alt="ited" width="50" height="50" style="margin-bottom: 10px">
 
-    @foreach ($users as $user)
-        <p style="text-align: center; font-size: 22px">
+    @php
+        $bring = $brings->first();
+    @endphp
 
+    @if ($bring)
+        <p style="text-align: center; font-size: 22px">
             สำนักพัฒนาเทคนิคศึกษา <br>
-            ใบรายการค้นหาคุณภัณฑ์ของ : {{ $user->name }} <br>
-            เลขประจำตำแหน่ง : {{ $user->num_position }}
+            ใบรายการค้นหาคุณภัณฑ์ของ : {{ $bring->FullName }} <br>
+            เลขประจำตำแหน่ง : {{ $bring->num_department }}
         </p>
-    @endforeach
+    @endif
 
     <table style="border-collapse: collapse; width: 100%; font-size: 18px">
         <tr>

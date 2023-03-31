@@ -9,6 +9,7 @@ use App\Models\Company;
 use App\Models\Image;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon;
 
 class MoneyController extends Controller
 {
@@ -117,7 +118,11 @@ class MoneyController extends Controller
             $cash->save();
             //------------------------------------------------------------------------------------------
             $company->num_asset = $request->input('num_asset');
+
+
             $company->date_into = $request->input('date_into');
+            // $company->date_into = Carbon::parse($company->date_into)->format('dd/mm/YYYY');
+
             $company->name_asset = $request->input('name_asset');
             $company->detail = $request->input('detail');
             $company->unit = $request->input('unit');

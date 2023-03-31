@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <style>
         @page {
-            size: 21cm 29.7cm landscape;
+            size: A3 landscape;
         }
 
         @font-face {
@@ -16,7 +16,6 @@
 
         body {
             font-family: "THSarabunNew";
-
         }
 
         img {
@@ -28,10 +27,13 @@
             border: 1px solid;
             padding: 10px;
         }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 18px;
+        }
     </style>
-
-
-
 </head>
 
 <body>
@@ -43,18 +45,18 @@
         ใบรายการค้นหาคุณภัณฑ์
     </p>
 
-    <table style="border-collapse: collapse; width: 100%; font-size: 18px">
-        <tr>
-            <td width:20%>ลำดับ</td>
-            <td width:20%>หมายเลขครุภัณฑ์</td>
-            <td width:10%>วันที่รับเข้าคลัง</td>
-            <td width:10%>ชื่อครุภัณฑ์</td>
-            <td width:10%>รายละเอียด</td>
-            <td width:10%>หน่วยนับ</td>
-            <td width:10%>สถานที่ตั้ง</td>
-            <td width:10%>ราคา/หน่วย</td>
-            <td width:10%>สถานะ</td>
-            <td width:10%>หมายเลขครุภัณฑ์เก่า</td>
+    <table>
+        <tr style="text-align: center;">
+            <td>ลำดับ</td>
+            <td>หมายเลขครุภัณฑ์</td>
+            <td>วันที่รับเข้าคลัง</td>
+            <td>ชื่อครุภัณฑ์</td>
+            <td style="width:30%">รายละเอียด</td>
+            <td>หน่วยนับ</td>
+            <td>สถานที่ตั้ง</td>
+            <td>ราคา/หน่วย</td>
+            <td>สถานะ</td>
+            <td>หมายเลขครุภัณฑ์เก่า</td>
         </tr>
 
         @foreach ($companies as $company)

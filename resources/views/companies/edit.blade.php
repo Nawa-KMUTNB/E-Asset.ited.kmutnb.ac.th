@@ -20,7 +20,7 @@
     <div class="container mt-2">
         <div class="row">
             <div class="col-lg-12" id="brData2">
-                <h1 class="text-center">แก้ไขครุภัณฑ์</h1>
+                <h3 class="center">แก้ไขครุภัณฑ์</h3>
             </div>
             @if (session('status'))
                 <div class="alert alert-success">
@@ -295,8 +295,8 @@
                                 </option>
 
                                 <option value="สำนักงานผู้อำนวยการ">สำนักงานผู้อำนวยการ</option>
-                                <option value="ศูนย์รับองสมรรถนะบุคคล">ศูนย์รับองสมรรถนะบุคคล</option>
-                                <option value="ฝ่ายบริการวิชาการ">ฝ่ายบริการวิชาการ</option>
+                                <option value="ศูนย์รับองสมรรถนะบุคคล">ศูนย์รับรองสมรรถนะบุคคลฯ</option>
+                                <option value="ฝ่ายบริการวิชาการ">ฝ่ายบริการวิชาการและพัฒนานวัตกรรม</option>
                                 <option value="ฝ่ายพัฒนาระบบสารสนเทศ">ฝ่ายพัฒนาระบบสารสนเทศ</option>
                                 <option value="ฝ่ายสื่อการเรียนการสอน">ฝ่ายสื่อการเรียนการสอน</option>
                                 <option value="other">อื่น ๆ (โปรดระบุ)</option>
@@ -321,7 +321,7 @@
                     <div class="row g-2">
                         <strong>เลขแหล่งเงิน</strong> <br>
                         <div class="col-md-6">
-                            <select name="code_money" id="code_money" class="form-control dynamic"
+                            {{-- <select name="code_money" id="code_money" class="form-control dynamic"
                                 data-dependent="name_money">
                                 <option selected>โปรดเลือกเลขแหล่งเงิน</option>
                                 @foreach ($cashes as $cashing)
@@ -329,7 +329,11 @@
                                     </option>
                                 @endforeach
                                 <option value="other">อื่น ๆ (โปรดระบุ)</option>
-                            </select>
+                            </select> --}}
+
+                            <input type="text" name="code_money" id="code_money" class="form-control"
+                                placeholder="โปรดกรอกเลขแหล่งเงิน">
+
 
                             <div id="otherCode" style="display:none;">
                                 <input type="text" name="otherCode" placeholder="โปรดระบุเพิ่มเติม"
@@ -353,10 +357,13 @@
                     <div class="row g-2">
                         <strong>ชื่อแหล่งเงิน</strong> <br>
                         <div class="col-md-6">
-                            <select name="name_money" id="name_money" class="form-control dynamic"
+                            {{-- <select name="name_money" id="name_money" class="form-control dynamic"
                                 data-dependent="budget">
                                 <option value="">โปรดเลือกชื่อแหล่งเงิน</option>
-                            </select>
+                            </select> --}}
+
+                            <input type="text" id="name_money" class="form-control" name="name_money"
+                                placeholder="โปรดกรอกชื่อแหล่งเงิน">
 
                             <div id="otherMoney" style="display:none;">
                                 <input type="text" name="otherMoney" placeholder="โปรดระบุเพิ่มเติม"
@@ -379,9 +386,12 @@
                     <div class="row g-2">
                         <strong>ปีงบประมาณ</strong> <br>
                         <div class="col-md-6">
-                            <select name="budget" class="form-control" id="budget">
+                            {{-- <select name="budget" class="form-control" id="budget">
                                 <option value="">โปรดเลือกปีงบประมาณ</option>
-                            </select>
+                            </select> --}}
+
+                            <input type="text" name="budget" id="budget" class="form-control"
+                                placeholder="โปรดกรอกปีงบประมาณ">
 
                             <div id="otherForm" style="display:none;">
                                 <input type="text" name="otherBudget" placeholder="โปรดระบุเพิ่มเติม"
@@ -408,10 +418,12 @@
                 <div class="col-md-12 text-center mt-1">
                     <button type="submit" class="btn mt-2" id="btn2">ยืนยัน</button>
                 </div>
+                <div>
+                    <a class="btn btn-outline-danger" href="{{ route('companies.index') }}"
+                        id="back">ย้อนกลับ</a>
+                </div>
             </form>
-            <div>
-                <a class="btn btn-outline-danger" href="{{ route('companies.index') }}" id="back">ย้อนกลับ</a>
-            </div>
+
 
         </div>
     </div>

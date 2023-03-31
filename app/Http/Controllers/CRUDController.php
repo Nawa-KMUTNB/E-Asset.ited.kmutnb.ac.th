@@ -96,40 +96,65 @@ class CRUDController extends Controller
         //Cash Update (อัพเดทตาราง Cash ของแหล่งเงิน ชื่อแหล่งเงิน งบประจำปี)
         $cash = Chips::find($id);
 
-        if (is_null($cash)) {
-            return redirect()->route('companies.index')->with('success', 'Company not found');
+        $code_money = $request->input('code_money');
+        $name_money = $request->input('name_money');
+        $budget = $request->input('budget');
+
+        if (!empty($code_money) && !empty($name_money) && !empty($budget)) {
+            $cash->code_money = $code_money;
+            $cash->name_money = $name_money;
+            $cash->budget = $budget;
+            $cash->update();
         } else {
-            $cash->code_money = $request->input('code_money');
-            if ($request->input('code_money') === 'other') {
-                $cash->otherCode = $request->input('otherCode');
-                $cash->code_money = 0;
-            } else {
-                $cash->otherCode = '';
-            }
 
-            $cash->name_money = $request->input('name_money');
-            if ($request->input('name_money') === 'other') {
-                $cash->otherMoney = $request->input('otherMoney');
-                $cash->name_money = 0;
-            } else {
-                $cash->otherMoney = '';
-            }
 
-            $cash->budget = $request->input('budget');
-            if ($request->input('budget') === 'other') {
-                $cash->otherBudget = $request->input('otherBudget');
-                $cash->budget = 0;
-            } else {
-                $cash->otherBudget = '';
+            if ($cash['code_money'] !== $cash->code_money) {
+                $cash->code_money = $cash['code_money'];
             }
-
-            if (!empty($code_money) && !empty($name_money) && !empty($budget)) {
-                $cash->code_money = $code_money;
-                $cash->name_money = $name_money;
-                $cash->budget = $budget;
-                $cash->update();
+            if ($cash['name_money'] !== $cash->name_money) {
+                $cash->name_money = $cash['name_money'];
             }
+            if ($cash['budget'] !== $cash->budget) {
+                $cash->budget = $cash['budget'];
+            }
+            $cash->update();
         }
+
+
+        // if (is_null($cash)) {
+        //     return redirect()->route('companies.index')->with('success', 'Company not found');
+        // } else {
+        //     $cash->code_money = $request->input('code_money');
+        //     if ($request->input('code_money') === 'other') {
+        //         $cash->otherCode = $request->input('otherCode');
+        //         $cash->code_money = 0;
+        //     } else {
+        //         $cash->otherCode = '';
+        //     }
+
+        //     $cash->name_money = $request->input('name_money');
+        //     if ($request->input('name_money') === 'other') {
+        //         $cash->otherMoney = $request->input('otherMoney');
+        //         $cash->name_money = 0;
+        //     } else {
+        //         $cash->otherMoney = '';
+        //     }
+
+        //     $cash->budget = $request->input('budget');
+        //     if ($request->input('budget') === 'other') {
+        //         $cash->otherBudget = $request->input('otherBudget');
+        //         $cash->budget = 0;
+        //     } else {
+        //         $cash->otherBudget = '';
+        //     }
+
+        //     if (!empty($code_money) && !empty($name_money) && !empty($budget)) {
+        //         $cash->code_money = $code_money;
+        //         $cash->name_money = $name_money;
+        //         $cash->budget = $budget;
+        //         $cash->update();
+        //     }
+        // }
         //-------------------------------------------------------------------
 
         $validator = Validator::make($request->all(), [
@@ -178,7 +203,6 @@ class CRUDController extends Controller
             }
         }
         $company->update();
-
         return redirect()->route('companies.index')->with('success', 'แก้ไขครุภัณฑ์สำเร็จแล้ว');
     }
 
@@ -307,6 +331,6 @@ class CRUDController extends Controller
         if (!$images->count()) {
             return redirect()->route('companies.detail')->with('success', 'Images not found');
         }
-        return view('companies.detail', compact(['company', 'cashes', 'images']));
+        return view('detail.detail', compact(['company', 'cashes', 'images']));
     }
 }

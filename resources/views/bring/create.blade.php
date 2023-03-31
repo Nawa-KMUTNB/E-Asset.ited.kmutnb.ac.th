@@ -18,7 +18,7 @@
     <div class="container mt-2">
         <div class="row">
             <div class="col-lg-12 text-center" id="brData2">
-                <h3 style="font-size:30px; padding-top:6px">เพิ่มการเบิกครุภัณฑ์</h3>
+                <h3 style="padding-top:6px">เพิ่มการเบิกครุภัณฑ์</h3>
             </div>
             @if (session('status'))
                 <div class="alert alert-success">
@@ -120,8 +120,8 @@
                             <select name="department" class="form-select" id="bring-department">
                                 <option selected>โปรดเลือกฝ่ายที่ครอบครองครุภัณฑ์</option>
                                 <option value="สำนักงานผู้อำนวยการ">สำนักงานผู้อำนวยการ</option>
-                                <option value="ศูนย์รับองสมรรถนะบุคคล">ศูนย์รับองสมรรถนะบุคคล</option>
-                                <option value="ฝ่ายบริการวิชาการ">ฝ่ายบริการวิชาการ</option>
+                                <option value="ศูนย์รับองสมรรถนะบุคคล">ศูนย์รับรองสมรรถนะบุคคลฯ</option>
+                                <option value="ฝ่ายบริการวิชาการ">ฝ่ายบริการวิชาการและพัฒนานวัตกรรม</option>
                                 <option value="ฝ่ายพัฒนาระบบสารสนเทศ">ฝ่ายพัฒนาระบบสารสนเทศ</option>
                                 <option value="ฝ่ายสื่อการเรียนการสอน">ฝ่ายสื่อการเรียนการสอน</option>
                                 <option value="other">อื่น ๆ (โปรดระบุ)</option>

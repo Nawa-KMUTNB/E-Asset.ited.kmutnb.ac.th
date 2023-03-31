@@ -104,7 +104,14 @@
                 </thead>
                 @foreach ($brings as $bring)
                     <tr>
-                        <td>{{ $bring->id }}</td>
+                        <td>
+                            @php
+                                $count = DB::table('brings')
+                                    ->where('id', '<=', $bring->id)
+                                    ->count();
+                            @endphp
+                            {{ $count }}
+                        </td>
                         <td>{{ $bring->FullName }}</td>
                         <td>{{ $bring->date_bring }}</td>
                         <td>{{ $bring->detail }}</td>

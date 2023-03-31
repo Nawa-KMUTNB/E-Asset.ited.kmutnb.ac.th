@@ -8,7 +8,9 @@
     <title>เพิ่มครุภัณฑ์</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="../css/main2.css" rel="stylesheet">
+    <link href="../../css/main2.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment.min.js"></script>
 
 </head>
 
@@ -17,7 +19,7 @@
     <div class="container mt-2">
         <div class="row">
             <div class="col-lg-12 text-center" id="brData">
-                <h1>เพิ่มครุภัณฑ์</h1>
+                <h3 class="center">เพิ่มครุภัณฑ์</h3>
             </div>
 
             @if (session('status'))
@@ -47,8 +49,27 @@
                     <div class="col-md-6">
                         <div class="form-group my-3">
                             <strong>วันที่รับเข้าคลัง</strong>
-                            <input type="date" name="date_into" class="form-control" placeholder="วันที่รับเข้าคลัง"
-                                id="input" />
+
+                            {{-- <input type="date" name="date_into" class="form-control" id="input"
+                                onchange="updateDateFormat(this)" />
+ --}}
+                            <input type="date" data-date-format="DD/MM/YYYY" name="date_into" class="form-control"
+                                id="input_date" placeholder="DD-MM-YYYY">
+
+                            <script>
+                                $("input").on("change", function() {
+                                    // Check if the input value is a valid date
+                                    if (!isNaN(Date.parse(this.value))) {
+                                        // Format the date string and set the data-date attribute
+                                        var formattedDate = moment(this.value).format(this.getAttribute("data-date-format"));
+                                        this.setAttribute("data-date", formattedDate);
+                                    } else {
+                                        // Clear the data-date attribute if the input value is empty or invalid
+                                        this.removeAttribute("data-date");
+                                    }
+                                }).trigger("change");
+                            </script>
+
                             @error('date_into')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -205,8 +226,8 @@
                             <select id="input-department" class="form-select" name="department">
                                 <option selected>โปรดเลือกฝ่ายที่ครอบครองครุภัณฑ์</option>
                                 <option value="สำนักงานผู้อำนวยการ">สำนักงานผู้อำนวยการ</option>
-                                <option value="ศูนย์รับองสมรรถนะบุคคล">ศูนย์รับองสมรรถนะบุคคล</option>
-                                <option value="ฝ่ายบริการวิชาการ">ฝ่ายบริการวิชาการ</option>
+                                <option value="ศูนย์รับองสมรรถนะบุคคล">ศูนย์รับรองสมรรถนะบุคคลฯ</option>
+                                <option value="ฝ่ายบริการวิชาการ">ฝ่ายบริการวิชาการและพัฒนานวัตกรรม</option>
                                 <option value="ฝ่ายพัฒนาระบบสารสนเทศ">ฝ่ายพัฒนาระบบสารสนเทศ</option>
                                 <option value="ฝ่ายสื่อการเรียนการสอน">ฝ่ายสื่อการเรียนการสอน</option>
                                 <option value="other">อื่น ๆ (โปรดระบุ)</option>

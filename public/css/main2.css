@@ -1,18 +1,18 @@
 #border1 {
     border-radius: 5px;
-    background-color: rgba(71, 71, 71, 0.993);
+    background-color: #ffffff;
     box-shadow: 5px 20px 40px black;
-    width: 1200px;
-    height: 1230px;
-    margin-left: 70px;
+    width: 1000px;
+    height: auto;
+    margin-left: 150px;
     margin-top: 30px;
-    margin-bottom: 50px;
+    border-radius: 1.25rem;
+    padding: 0px;
 }
 
 #border2 {
-    margin: 10px;
-    margin-top: 40px;
-    background-color: rgb(222, 241, 252);
+    margin: 25px;
+    background-color: #ffffff(255, 255, 255);
     border-radius: 20px;
     padding: 40px;
 
@@ -20,19 +20,19 @@
 
 #border3 {
     border-radius: 5px;
-    background-color: rgb(71, 71, 71);
+    background-color: #ffffff;
     box-shadow: 5px 20px 40px black;
-    width: 1200px;
+    width: 1000px;
     height: auto;
-    margin-left: 70px;
+    margin-left: 150px;
     margin-top: 30px;
     border-radius: 1.25rem;
+    padding: 0px;
 }
 
 #border4 {
     margin: 25px;
-
-    background-color: rgb(251, 255, 188);
+    background-color: #ffffff;
     border-radius: 20px;
     padding: 40px;
 
@@ -40,7 +40,7 @@
 
 
 #bg {
-    background-color: rgb(248, 248, 248);
+    background-color: rgb(228, 228, 228);
 }
 
 #bg2 {
@@ -52,6 +52,35 @@
     height: 45px;
 }
 
+#input_date {
+    position: relative;
+    color: white;
+    height: 45px;
+    border-radius: 30px;
+}
+
+#input_date:before {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    content: attr(data-date);
+    display: inline-block;
+    color: black;
+}
+
+#input_date::-webkit-datetime-edit,
+#input_date::-webkit-inner-spin-button,
+#input_date::-webkit-clear-button {
+    display: none;
+}
+
+#input_date::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: black;
+    opacity: 1;
+}
 
 #input-department {
     border-radius: 30px;
@@ -113,12 +142,12 @@ strong {
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 5px;
     border-top-right-radius: 60px;
-    width: 30%;
+    width: 20%;
     text-align: left;
     height: 70px;
     padding: 10px;
     padding-right: 90px;
-    background: rgb(0, 140, 255);
+    background: rgb(46, 119, 255);
     box-shadow: 3px 4px 7px rgb(54, 54, 54);
     margin-bottom: 15px;
     margin-top: 30px;
@@ -131,7 +160,7 @@ strong {
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 5px;
     border-top-right-radius: 60px;
-    width: 30%;
+    width: 20%;
     text-align: left;
     height: 70px;
     padding: 10px;
@@ -170,7 +199,7 @@ strong {
     font-size: 30px;
     color: rgb(0, 0, 0);
     background-color: #ffe600;
-    margin-top: 10px;
+    margin-top: 50px;
 
 }
 
@@ -188,6 +217,13 @@ strong {
     font-size: 17px;
     text-shadow: 0 3px 10px black;
     text-decoration: none;
+}
+
+.center {
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 5px;
+    margin-top: 4px;
 }
 
 #back:hover {

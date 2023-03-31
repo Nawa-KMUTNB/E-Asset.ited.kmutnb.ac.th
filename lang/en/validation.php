@@ -106,7 +106,8 @@ return [
     'prohibited_if' => 'The :attribute field is prohibited when :other is :value.',
     'prohibited_unless' => 'The :attribute field is prohibited unless :other is in :values.',
     'prohibits' => 'The :attribute field prohibits :other from being present.',
-    'regex' => 'The :attribute format is invalid.',
+    // 'regex' => 'The :attribute format is invalid.',
+    'regex' => ' :attributeไม่ถูกต้องกรุณาใส่อีกครั้ง',
     'required' => 'The :attribute field is required.',
     'required_array_keys' => 'The :attribute field must contain entries for: :values.',
     'required_if' => 'The :attribute field is required when :other is :value.',
@@ -145,7 +146,108 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        //------------------------ ข้อมูลครุภัณฑ์ --------------------------------
+        'num_asset' => [
+            'required' => 'กรุณาใส่หมายเลขครุภัณฑ์ให้อยู่ในรูปแบบ xxxxxxxxxxxx-xxxxx-xxxxx',
+        ],
+        'date_into' => [
+            'required' => 'กรุณาใส่วันที่ให้อยู่ในรูปแบบ เดือน/วัน/ปี เช่น 12/25/2022',
+        ],
+        'name_asset' => [
+            'required' => 'กรุณาใส่ชื่อครุภัณฑ์',
+            'max' => 'ใส่ชื่อครุภัณฑ์ของคุณยาวมากไป'
+        ],
+        'detail' => [
+            'required' => 'กรุณาใส่รายละเอียด',
+            'max' => 'ใส่รายละเอียดครุภัณฑ์ยาวมากไป'
+        ],
+        'unit' => [
+            'required' => 'กรุณาใส่หน่วยนับ',
+            'max' => 'ใส่หน่วยนับของครุภัณฑ์ยาวมากไป'
+        ],
+        'place' => [
+            'required' => 'กรุณาใส่สถานที่ตั้งครุภัณฑ์',
+            'max' => 'ใส่ชื่อสถานที่ตั้งครุภัณฑ์ยาวมากไป'
+        ],
+        'per_price' => [
+            'required' => 'กรุณาใส่ราคา/หน่วยให้อยู่รูปแบบ xx.xx เช่น 20.00',
+        ],
+        /* 'num_old_asset' => [
+            'required' => 'กรุณาใส่หมายเลขครุภัณฑ์เก่าให้อยู่รูปแบบ xxxx-xxx-xx-xx/xxxxx',
+        ],*/
+        'num_old_asset' => [
+            'required' => 'กรุณาใส่หมายเลขครุภัณฑ์เก่า',
+        ],
+        'fullname' => [
+            'required' => 'กรุณาใส่ชื่อ - สกุลผู้ครอบครองครุภัณฑ์',
+        ],
+        'department' => [
+            'required' => 'กรุณาเลือกฝ่ายที่ครอบครองครุภัณฑ์',
+        ],
+        'other_department' => [
+            'required' => 'กรุณาเลือกฝ่ายที่ครอบครองครุภัณฑ์',
+        ],
+        'name_info' => [
+            'required' => 'กรุณาใส่ชื่อ - สกุล ผู้นำเข้าคลัง',
+        ],
+        'num_department' => [
+            'required' => 'กรุณาใส่เลขอัตรา (เลขประจำตำแหน่ง)',
+        ],
+        'code_money' => [
+            'required' => 'กรุณาเลือกเลขแหล่งเงิน',
+        ],
+        'name_money' => [
+            'required' => 'กรุณาเลือกชื่อแหล่งเงิน',
+        ],
+        'budget' => [
+            'required' => 'กรุณาเลือกปีงบประมาณ',
+        ],
+
+
+
+        //--------------------------------------------------------------
+
+        //------------ จัดการผู้ใช้งาน ---------------
+        'name' => [
+            'required' => 'กรุณาใส่ชื่อ - นามสกุล',
+            'max' => 'ใส่ชื่อ - นามสกุล ยาวเกินไป',
+        ],
+        'email' => [
+            'required' => 'กรุณาใส่อีเมล ผู้ใช้งาน',
+        ],
+        'num_position' => [
+            'required' => 'กรุณาใส่เลขอัตรา (เลขประจำตำแหน่ง)',
+        ],
+        'position' => [
+            'required' => 'กรุณาใส่ตำแหน่ง',
+        ],
+        'department' => [
+            'required' => 'กรุณาใส่ชื่อฝ่าย',
+        ],
+        'task' => [
+            'required' => 'กรุณาใส่ชื่องาน',
+        ],
+        'is_admin' => [
+            'required' => 'กรุณาใส่สิทธิ์ในการใช้งานได้แค่เลข "0" และ "1" เท่านั้น',
+        ],
+        //--------------------------------------------------------------
+
+        //------- การเบิกครุภัณฑ์ --------
+        'FullName' => [
+            'required' => 'กรุณาใส่ชื่อ - สกุลผู้เบิกครุภัณฑ์',
+        ],
+        'date_bring' => [
+            'required' => 'กรุณาใส่วันที่ให้อยู่ในรูปแบบ เดือน/วัน/ปี เช่น 12/25/2022',
+        ],
+        'Date_into' => [
+            'required' => 'กรุณาใส่วันที่ให้อยู่ในรูปแบบ เดือน/วัน/ปี เช่น 12/25/2022',
+        ],
+
+
     ],
+
+
+
 
     /*
     |--------------------------------------------------------------------------
@@ -158,6 +260,17 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        //-- ข้อมูลครุภัณฑ์ ----
+        'num_asset' => 'หมายเลขครุภัณฑ์',
+        'per_price' => 'ราคา/หน่วย',
+        'num_department' => 'เลขอัตรา (เลขประจำตำแหน่ง)',
+        //-------------------
+
+        //-------- จัดการผู้ใช้งาน --------
+
+        'num_position' => 'เลขอัตรา (เลขประจำตำแหน่ง)',
+        'is_admin' => 'สิทธิ์การใช้งาน',
+    ],
 
 ];

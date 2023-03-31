@@ -74,7 +74,14 @@
                 </thead>
                 @foreach ($user as $users)
                     <tr>
-                        <td>{{ $users->id }}</td>
+                        <td>
+                            @php
+                                $count = DB::table('users')
+                                    ->where('id', '<=', $users->id)
+                                    ->count();
+                            @endphp
+                            {{ $count }}
+                        </td>
                         <td>{{ $users->name }}</td>
                         <td>{{ $users->email }}</td>
                         <td>{{ $users->num_position }}</td>

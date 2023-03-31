@@ -16,11 +16,20 @@
 <body>
     @section('content')
         <div class="container mt-2">
-            <div class="row">
-
-
+            <div class="container overflow-hidden">
+                <div class="row gx-5">
+                    <div class="col-sm-6 col-md-8 text-center" id="brData" style="margin-top:15px">
+                        <h3>รายละเอียดข้อมูลครุภัณฑ์</h3>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <a class="btn btn-warning" href="{{ route('companies.index') }}" id="back">ย้อนกลับ</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-
             {{-- --------------------------------------------------------------------------------------------------------------------------- --}}
 
             <form action="{{ route('detail_companies.index', $company->id) }}" method="POST" enctype="multipart/form-data"

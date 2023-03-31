@@ -65,7 +65,14 @@
                 </thead>
                 @foreach ($companies as $company)
                     <tr style="text-align: center">
-                        <td>{{ $company->id }}</td>
+                        <td>
+                            @php
+                                $count = DB::table('companies')
+                                    ->where('id', '<=', $company->id)
+                                    ->count();
+                            @endphp
+                            {{ $count }}
+                        </td>
                         <td>{{ $company->num_asset }}</td>
                         <td>{{ $company->date_into }}</td>
                         <td>{{ $company->name_asset }}</td>
