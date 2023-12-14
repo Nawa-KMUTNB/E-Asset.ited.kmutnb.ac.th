@@ -24,25 +24,20 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background-color:#7F00FF;">
-        <div class="container">
-            <img src="/ited.jpg" alt="ited" width="40" height="40" style="margin-left:20px">
-        </div>
-        <div class="container">
-            <p style="text-align: center;  margin-top:15px;color:white;margin:auto;">
-                เว็บไซต์บริหารจัดการครุภัณฑ์ของสำนักพัฒนาเทคนิคศึกษา <br>(E-Asset Management)</p>
-        </div>
-        <div class="container"></div>
-    </nav>
+    <div class="container-fluid" style="background-color:#7F00FF;">
+        <p class="text-center" style=" margin-top:15px;color:white;margin:auto;">
+            <img src="/ited.jpg" alt="ited" style="margin-left:20px; width:40px; height:40px;" class="img-fluid">
+
+            เว็บไซต์บริหารจัดการครุภัณฑ์ของสำนักพัฒนาเทคนิคศึกษา <br>(E-Asset Management)
+        </p>
+    </div>
 
 
 
 
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background-color:#ccc;">
-            <div class="container"></div>
-            <div class="container"></div>
-            <div class="container">
+            <div class="container-fluid">
 
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">

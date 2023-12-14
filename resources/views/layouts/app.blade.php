@@ -25,31 +25,26 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background-color:#7F00FF;">
-        <div class="container">
-            <img src="/ited.jpg" alt="ited" width="40" height="40" style="margin-left:20px">
-        </div>
-        <div class="container">
-            <p style="text-align: center;  margin-top:15px;color:white;margin:auto;">
-                เว็บไซต์บริหารจัดการครุภัณฑ์ของสำนักพัฒนาเทคนิคศึกษา <br>(E-Asset Management)</p>
-        </div>
-        <div class="container"></div>
-    </nav>
+    <div class="container-fluid" style="background-color:#7F00FF;">
+        <p class="text-center" style=" margin-top:15px;color:white;margin:auto;">
+            <img src="/ited.jpg" alt="ited" style="margin-left:20px; width:40px; height:40px;" class="img-fluid">
+
+            เว็บไซต์บริหารจัดการครุภัณฑ์ของสำนักพัฒนาเทคนิคศึกษา <br>(E-Asset Management)
+        </p>
+    </div>
 
 
 
 
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background-color:#ccc;">
-            <div class="container"></div>
-            <div class="container"></div>
-            <div class="container">
+            <div class="container-fluid">
 
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -96,9 +91,16 @@
     <div style="padding-left:20%;padding-right:20%;margin-top:15px;">
         <nav class="navbar navbar-expand-md navbar-light">
             <div class="container">
-                <a id="a1" style="border-top-left-radius:20px;border-bottom-left-radius:20px" class="btns"
-                    href="{{ route('admin.home') }}">{{ __('ข้อมูลครุภัณฑ์') }}</button></a>
 
+                <a id="a1" style="border-top-left-radius:20px;border-bottom-left-radius:20px"
+                    class="btns {{ session('isListPage') ? 'active' : '' }}"
+                    href="{{ route('admin.home') }}">{{ __('ข้อมูลครุภัณฑ์') }}</a>
+                <style>
+                    .custom-purple {
+                        background-color: #7F00FF;
+                        color: white;
+                    }
+                </style>
                 <a class="btns" href="{{ route('user.index') }}" id="a1">{{ __('จัดการผู้ใช้งาน') }}</a>
 
                 <a class="btns" style="border-top-right-radius:20px;border-bottom-right-radius:20px"

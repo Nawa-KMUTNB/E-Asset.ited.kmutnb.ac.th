@@ -121,7 +121,10 @@ class MoneyController extends Controller
 
 
             $company->date_into = $request->input('date_into');
-            // $company->date_into = Carbon::parse($company->date_into)->format('dd/mm/YYYY');
+            // $company->date_into = Carbon::createFromFormat('d/m/Y', $request->input('date_into'))->toDateString();
+            // $date_into = DateTime::createFromFormat('d/m/Y', $request->input('date_into'));
+
+
 
             $company->name_asset = $request->input('name_asset');
             $company->detail = $request->input('detail');

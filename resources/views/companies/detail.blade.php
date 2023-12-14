@@ -15,10 +15,10 @@
 
 <body>
     @section('content')
-        <div class="container mt-2">
+        <div class="container-xxl mt-2">
             <div class="container overflow-hidden">
-                <div class="row gx-5">
-                    <div class="col-sm-6 col-md-8 text-center" id="brData" style="margin-top:15px">
+                <div class="row justify-content-between g-0">
+                    <div class="text-center col-4" id="brData">
                         <h3>รายละเอียดข้อมูลครุภัณฑ์</h3>
                     </div>
                     <div class="col">
@@ -40,7 +40,7 @@
                             <h4>รูปภาพปก</h4><br>
                             <img src="{{ asset('/cover/' . $company->cover) }}" style="max-height: 250px; max-width:250px"
                                 class="border border-2 border-secondary mt-1" alt="Image">
-                            <h4>รูปภาพ</h4> <br>
+                            <h4>รูปภาพเพิ่มเติม</h4> <br>
                             @foreach ($images as $img)
                                 <img src="/images/{{ $img->image }}" style="max-height: 250px; max-width:250px"
                                     class="border border-2 border-secondary mt-1" alt="Image">
@@ -64,7 +64,7 @@
                                 @php
                                     $doubleValue = $company->per_price;
                                     $formattedValue = number_format($doubleValue, 2); // Output: "1,234.57"
-                                    
+
                                 @endphp
 
                                 {{ $formattedValue }} </i> </p>
@@ -79,7 +79,8 @@
                         <div class="col">
                             @foreach ($cashes as $cash)
                                 <p style="margin-top:15px;"><b>วันที่รับเข้าคลัง</b> <br>&nbsp;&nbsp;&nbsp;&nbsp;:
-                                    {{ $company->date_into }} </i></p>
+                                    {{-- {{ $company->date_into }}  --}}
+                                    {{ date('d-m-Y', strtotime($company->date_into)) }} </i></p>
                                 <p><b>ชื่อ - สกุล ผู้นำเข้าคลัง</b> <br>&nbsp;&nbsp;&nbsp;&nbsp;: {{ $company->name_info }}
                                     </i> </p>
                                 <p><b>เลขแหล่งเงิน</b> <br>&nbsp;&nbsp;&nbsp;&nbsp;:

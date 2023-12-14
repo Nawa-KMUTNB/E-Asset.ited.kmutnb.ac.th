@@ -32,14 +32,19 @@ h3 {
 }
 
 #search {
-    width: 20%;
+
     height: 40px;
     margin-left: 55%;
-
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
 }
 
 #height {
     height: 40px;
+    margin-left: 3.5px;
+    margin-top: 10px;
+    border-radius: 10px;
 }
 
 #center {
@@ -240,7 +245,7 @@ h3 {
     border-bottom-right-radius: 60px;
     border-bottom-left-radius: 5px;
     border-top-right-radius: 60px;
-    width: 30%;
+    width: 360px;
     text-align: left;
     height: 70px;
     padding: 15px;
@@ -248,7 +253,7 @@ h3 {
     background: rgb(248, 195, 19);
     box-shadow: 3px 4px 7px rgb(54, 54, 54);
     margin-bottom: 15px;
-
+    margin-top: 15px;
 }
 
 #brData2 {

@@ -122,7 +122,7 @@
                             @php
                                 $doubleValue = $company->per_price;
                                 $formattedValue = number_format($doubleValue, 2);
-                                $formattedValue = str_replace(',', '', $formattedValue); // Output: "1234"
+                                //  $formattedValue = str_replace(',', '', $formattedValue); // Output: "1234"
                             @endphp
                             <input type="text" name="per_price" value="{{ $formattedValue }}" class="form-control"
                                 placeholder="ราคา/หน่วย" id="input" />
@@ -137,7 +137,7 @@
                     <div class="col-md-6">
                         <div class="form-group my-3">
                             <strong>สถานะ</strong>
-                            <input type="text" name="status_buy" value="-" class="form-control "
+                            <input type="text" name="status_buy" class="form-control "
                                 value="{{ $company->status_buy }}" placeholder="สถานะ (ถ้าไม่มี ให้ใส่ในช่องว่า ไม่มี)"
                                 id="input" />
                             @error('status_buy')
@@ -151,7 +151,7 @@
                     <div class="col-md-6">
                         <div class="form-group my-3">
                             <strong>หมายเลขครุภัณฑ์เก่า</strong>
-                            <input type="text" name="num_old_asset" value="-" class="form-control"
+                            <input type="text" name="num_old_asset" class="form-control"
                                 value="{{ $company->num_old_asset }}" placeholder="หมายเลขครุภัณฑ์เก่า"
                                 id="input" />
                             @error('num_old_asset')

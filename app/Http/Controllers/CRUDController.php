@@ -12,15 +12,18 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\App;
+use Carbon\Carbon;
 
 class CRUDController extends Controller
 {
     //Create Index
     public function index()
     {
+        session()->forget('isListPage');
         $data['companies'] = Company::orderBy('id', 'asc')->paginate(10);
-
-        return view('companies.index', $data);
+        $date = Company::pluck('date_into')->first();
+        $newDate = Carbon::createFromFormat('Y-m-d', $date)->format('d/m/Y');
+        return view('companies.index', $data, compact('newDate'));
     }
     public function member()
     {
@@ -313,12 +316,16 @@ class CRUDController extends Controller
 
     public function detailCompany($id)
     {
+
+        session(['isListPage' => true]);
+
         $company = Company::find($id);
         $cashes = Chips::where('id', $id)->get();
         $images = Image::where('companies_id', $id)->get();
         if (!$images->count()) {
             return redirect()->route('companies.detail')->with('success', 'Images not found');
         }
+
         return view('companies.detail', compact(['company', 'cashes', 'images']));
     }
 

@@ -53,10 +53,14 @@
                             {{-- <input type="date" name="date_into" class="form-control" id="input"
                                 onchange="updateDateFormat(this)" />
  --}}
-                            <input type="date" data-date-format="DD/MM/YYYY" name="date_into" class="form-control"
-                                id="input_date" placeholder="DD-MM-YYYY">
+                            <input type="date" name="date_into" class="form-control" id="input">
 
-                            <script>
+
+
+                            {{-- <input type="date" data-date-format="DD/MM/YYYY" name="date_into" class="form-control"
+                                id="input_date" placeholder="DD-MM-YYYY"> --}}
+
+                            {{-- <script>
                                 $("input").on("change", function() {
                                     // Check if the input value is a valid date
                                     if (!isNaN(Date.parse(this.value))) {
@@ -68,7 +72,7 @@
                                         this.removeAttribute("data-date");
                                     }
                                 }).trigger("change");
-                            </script>
+                            </script> --}}
 
                             @error('date_into')
                                 <div class="alert alert-danger">{{ $message }}</div>
@@ -131,6 +135,8 @@
                             <strong>ราคา/หน่วย</strong>
                             <input type="text" name="per_price" class="form-control" placeholder="ราคา/หน่วย"
                                 id="input" />
+                            <p style="color: red; font-size: 14px; padding-left: 10px; padding-top:3px">ตัวอย่างเช่น
+                                20.00</p>
                             @error('per_price')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
