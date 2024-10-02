@@ -1,10 +1,10 @@
 #border1 {
     border-radius: 5px;
-    background-color: #ffffff;
+    background-color: #ffffff(255, 255, 255);
     box-shadow: 5px 20px 40px black;
     width: 1000px;
     height: auto;
-    margin-left: 150px;
+    margin: 0 auto;
     margin-top: 30px;
     border-radius: 1.25rem;
     padding: 0px;
@@ -24,7 +24,7 @@
     box-shadow: 5px 20px 40px black;
     width: 1000px;
     height: auto;
-    margin-left: 150px;
+    margin: 0 auto;
     margin-top: 30px;
     border-radius: 1.25rem;
     padding: 0px;
@@ -37,7 +37,6 @@
     padding: 40px;
 
 }
-
 
 #bg {
     background-color: rgb(228, 228, 228);
@@ -52,35 +51,6 @@
     height: 45px;
 }
 
-#input_date {
-    position: relative;
-    color: white;
-    height: 45px;
-    border-radius: 30px;
-}
-
-#input_date:before {
-    position: absolute;
-    top: 10px;
-    left: 15px;
-    content: attr(data-date);
-    display: inline-block;
-    color: black;
-}
-
-#input_date::-webkit-datetime-edit,
-#input_date::-webkit-inner-spin-button,
-#input_date::-webkit-clear-button {
-    display: none;
-}
-
-#input_date::-webkit-calendar-picker-indicator {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: black;
-    opacity: 1;
-}
 
 #input-department {
     border-radius: 30px;
@@ -208,8 +178,6 @@ strong {
 
     box-shadow: 0 7px 10px black;
     color: rgb(255, 255, 255);
-
-
 }
 
 #back {

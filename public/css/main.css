@@ -32,12 +32,11 @@ h3 {
 }
 
 #search {
-
     height: 40px;
-    margin-left: 55%;
+    margin-left: 70%;
+    margin-right: 5px;
     border-radius: 10px;
     margin-top: 10px;
-    margin-right: 5px;
 }
 
 #height {
@@ -101,8 +100,8 @@ h3 {
 }
 
 #weight {
-    width: 1000px;
     height: auto;
+    margin: 0 auto;
 }
 
 #shadow {
@@ -163,7 +162,7 @@ h3 {
 
 #email {
     border-radius: 30px;
-
+    margin: 0 auto;
 }
 
 #email:focus {
@@ -172,7 +171,7 @@ h3 {
 
 #password {
     border-radius: 30px;
-
+    margin: 0 auto;
 }
 
 #password:focus {
@@ -381,7 +380,7 @@ p {
     }
 }
 
-.table {
+thead {
     text-align: center;
     background-color: #ccc;
 }
